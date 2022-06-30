@@ -1,0 +1,128 @@
+# import tkinter as tk
+import  random
+#
+# window= tk.Tk()
+# window.resizable(width=False,height=False)
+# window.geometry('640x480')
+#
+#
+# def on_key_press(event: tk.Event):
+#     if event.keysym == "BackSpace":
+#         return None  # Не блокируем BackSpace
+#     if event.char not in a:
+#         return "break"  # Блокируем ввод всего кроме букв считанных из файла
+#
+#
+#
+# def one_click():
+#     global i
+#     global Rez1
+#     while i!=3:
+#         print('Rez1',Rez1)
+#         z = pole.get()
+#         print(z)
+#         pole.delete(0, tk.END)
+#         print('1')
+#         if Rez1 == z:
+#             rezultat.config(text='Угадал')
+#             i=3
+#         elif Rez1 !=z:
+#             print('ДА')
+#             i+=1
+#
+#
+#
+#
+#
+# def two_click():
+#     Rez = random.randint(1, 100)
+#     rezultat.config(text=Rez)
+# def tre_click():
+#     Rez = random.randint(1, 1000)
+#     rezultat.config(text=Rez)
+#
+#
+#
+# i=0
+# Rez1=random.randint(1, 10)
+# print(Rez1)
+# Rez2=random.randint(1, 100)
+# Rez3=random.randint(1, 1000)
+# a=['1','2','3','4','5','6','7','8','9','0']
+# uroven=tk.Label(text='Выберите уровень сложности')
+# uroven.pack()
+# rezultat = tk.Label(text='')
+# rezultat.pack()
+# pole=tk.Entry()
+# pole.pack()
+# pole.bind("<KeyPress>", on_key_press)
+# One_u=tk.Button(text='1 уровень сложности',command=one_click)
+# One_u.pack()
+# Two_u=tk.Button(text='2 уровень сложности',command=two_click)
+# Two_u.pack()
+# Tre_u=tk.Button(text='3 уровень сложности',command=tre_click)
+# Tre_u.pack()
+#
+# window.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i=0
+print('Добро пожаловать в игру!')
+print('Попытайтесь угадать загаданное число')
+Randomnoe=random.randint(1,10)
+ZagadannoeChislo=int()
+while i!=3:
+    ZagadannoeChislo = int(input())
+    if Randomnoe==ZagadannoeChislo:
+        i=3
+        print('вы угадали')
+    elif Randomnoe<ZagadannoeChislo:
+        print('не правильно, число меньше')
+        i+=2
+    else:
+        print('не правильно, число больше')
+        i+=2
+    if i==6:
+        print('У вас не получилось, загаданное число было:', Randomnoe)
+        break
